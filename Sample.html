@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flaky Test Simulation</title>
+    <script>
+        let attempt = 0;
+
+        function flakyFunction() {
+            attempt++;
+
+            if (attempt < 3) {
+                document.getElementById("status").innerText = `Attempt ${attempt}: Test Failed!`;
+                document.getElementById("status").style.color = "red";
+            } else {
+                document.getElementById("status").innerText = "Attempt 3: Test Passed!";
+                document.getElementById("status").style.color = "green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Flaky Test Simulation</h2>
+    <button onclick="flakyFunction()">Run Test</button>
+    <p id="status">Waiting for test...</p>
+</body>
+</html>
