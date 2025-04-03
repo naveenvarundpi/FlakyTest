@@ -10,7 +10,7 @@
         function flakyFunction() {
             attempt++;
 
-            if (attempt < 3) {
+            if (attempt < 2) {
                 document.getElementById("status").innerText = `Attempt ${attempt}: Test Failed!`;
                 document.getElementById("status").style.color = "red";
             } else {
